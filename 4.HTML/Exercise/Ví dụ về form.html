@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>VÍ DỤ VỀ FORM</title>
+</head>
+<body>
+<br>
+    <form action="login" name="form-name"method="post">
+    <fieldset>
+        <legend>personalia:</legend>
+        <label for="uname">name:</label>
+        <input type="text" id="uname" name="uname"/> <br><br>
+        <label for="email">email:</label>
+        <input type="text" id="email"name="email"/><br><br>
+        <label for="dod">Date of birth:</label>
+        <input type="text"id="dod" name ="dod"/><br>
+        <input type="submit" value="submit"/>
+    </fieldset>
+    </form>
+    <form action="http://xuanthulab.net" method="get">
+        <fieldset>
+            <legend> LOGIN</legend>
+            <label>Ten Dang Nhap:</label><br>
+            <input name="name" type="text"><br>
+            <label>Mật khẩu:</label><br>
+            <input name="pass" type="password" value=""><br>
+            <input type="submit" name="submit" value="Dang nhap"><br>
+        </fieldset>
+        <label>Họ tên:<br>
+            <input type="text" value="TRAN HUU PHUC" /></label><br>
+        <label>Xe máy<input name="phuongtien" type="checkbox" value="xemay" /></label><br />
+        <label>Xe bus<input name="phuongtien" type="checkbox" value="xebus" /></label><br />
+        <label>Xe đạp<input name="phuongtien" type="checkbox" value="xedap" /></label><br />
+        <label>Đi bộ<input name="phuongtien" type="checkbox" value="dibo" /></label>
+    </form>
+
+<form action="">
+    User name:<br>
+    <input type="text" name="userid">
+    <br>
+    User password:<br>
+    <input type="password" name="psw">
+</form>
+
+<p>Các kí tự trong trường password được ẩn đi (nó được mã hóa hiển thị thành hình sao hoặc các chấm tròn).</p>
+
+<form action="action_page.php">
+    <input type="radio" name="gender" value="male" checked> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other<br><br>
+    <input type="submit">
+</form>
+
+</body>
+</html>
