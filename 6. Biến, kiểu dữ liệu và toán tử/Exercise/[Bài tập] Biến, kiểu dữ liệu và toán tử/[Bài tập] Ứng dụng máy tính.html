@@ -16,10 +16,11 @@
 <input type="text" id="num1">
 <input type="text" id="num2">
 <br>
+<br>
 <button onclick="addition()">Add</button>
-<button>Sub</button>
-<button>Mul</button>
-<button>Div</button>
+<button onclick="substraction()">Sub</button>
+<button onclick="multiplication()">Mul</button>
+<button onclick="division()">Div</button>
 <p id="result"></p>
 ​
 <script>
@@ -28,6 +29,18 @@
     function addition() {
         let result = parseInt(num1.value) + parseInt(num2.value) ;
         document.getElementById("result").innerText = "Result addition: " + result;
+    }
+    function substraction() {
+        let result= parseInt(num1.value) - parseInt(num2.value);
+        document.getElementById('result').innerText = 'result substraction: ' + result;
+    }
+    function multiplication() {
+        let result= parseInt(num1.value) * parseInt(num2.value);
+        document.getElementById('result').intertex ='resule muliplication: ' + result;
+    }
+    function division() {
+        let result = parseInt(num1.value) / parseInt(num2.value);
+        document.getElementById('result').innerText = 'result division: ' + result;
     }
 </script>
 </body>
