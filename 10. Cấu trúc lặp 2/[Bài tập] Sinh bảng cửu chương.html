@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sinh bảng cửu chương</title>
+</head>
+<body>
+        <div id="table"></div>
+        <script>
+    document.getElementById("table").innerHTML =
+        "<table border=\"1\">\n" +
+        "    <tr>\n" +
+        "        <td>2 x 1 = 2</td>\n" +
+        "        <td>2 x 2 = 4</td>\n" +
+        "        <td>2 x 3 = 6</td>\n" +
+        "        <td>2 x 4 = 8</td>\n" +
+        "        <td>2 x 5 = 10</td>\n" +
+        "        <td>2 x 6 = 12</td>\n" +
+        "        <td>2 x 7 = 14</td>\n" +
+        "        <td>2 x 8 = 16</td>\n" +
+        "        <td>2 x 9 = 18</td>\n" +
+        "    </tr>\n" +
+        "</table>";
+    let html = "<table border=\"1\">";
+
+    for (let row = 1; row <= 9; row++) {
+        html += "<tr>"
+        for (let col = 1; col <= 9; col++) {
+            let result = row * col;
+            html += "<td>";
+            html += col + " x " + row + " = " + result;
+            html += "</td>"
+        }
+        html += "</tr>"
+    }
+    html += "</table>";
+
+    let str = "<button>ABC</button>";
+
+    document.getElementById("table").innerHTML = html;
+        </script>
+</body>
+</html>
