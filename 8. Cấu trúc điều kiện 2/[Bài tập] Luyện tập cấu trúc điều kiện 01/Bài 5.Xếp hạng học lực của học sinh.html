@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5.Xếp hạng học lực của học sinh</title>
+</head>
+<body>
+<script>
+    let test = parseInt(prompt('Enter your scores test:'));
+    let midTermTest = parseInt(prompt('Enter your mid-term test scores:'));
+    let finalTermTest = parseInt(prompt('Enter your final term test scores:'));
+    let average = (test + midTermTest + finalTermTest) / 3;
+    if (average >= 9){
+        document.write('you are Excellent');
+    } else if (average >=8){
+        document.write('you are very good');
+    } else if ( average >= 6.5){
+        document.write('you are good');
+    } else if (average >= 5.5){
+        document.write('you are Average');
+    } else if (average >= 4.0){
+        document.write('you are below Average');
+    } else
+        document.write('you are Poor/Weak');
+</script>
+</body>
+</html>

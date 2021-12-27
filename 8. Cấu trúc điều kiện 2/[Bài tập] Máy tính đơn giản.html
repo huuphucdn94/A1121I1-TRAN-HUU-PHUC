@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Máy tính đơn giản</title>
+</head>
+<style>
+    td {
+        height: 50px;
+        width: 50px;
+        text-align: center
+    }
+</style>
+<body>
+<table border="1">
+    <tr>
+        <td colspan="4" style="border: 1px solid; font-size: large; text-align: right;">
+            <p id="result"></p>
+        </td>
+    </tr>
+    <tr>
+        <td onclick="pressNumber('1')">1</td>
+        <td onclick="pressNumber('2')">2</td>
+        <td onclick="pressNumber('3')">3</td>
+        <td onclick="pressOperator('+')">+</td>
+    </tr>
+    <tr>
+        <td onclick="pressNumber('4')">4</td>
+        <td onclick="pressNumber('5')">5</td>
+        <td onclick="pressNumber('6')">6</td>
+        <td onclick="pressOperator('-')">-</td>
+    </tr>
+    <tr>
+        <td onclick="pressNumber('7')">7</td>
+        <td onclick="pressNumber('8')">8</td>
+        <td onclick="pressNumber('9')">9</td>
+        <td onclick="pressOperator('*')">X</td>
+    </tr>
+    <tr>
+        <td onclick="pressC()">C</td>
+        <td onclick="pressNumber('0') ">0</td>
+        <td onclick="pressEqual()">=</td>
+        <td onclick="pressOperator('/')">/</td>
+    </tr>
+</table>
+​
+<script>
+    let result = 0;
+    let resultDislay = document.getElementById("result");
+        function pressNumber(num) {
+            if (resultDislay === '') {
+                resultDislay.innerHTML = num;
+            } else if (result === 0) {
+                resultDislay.innerHTML += num;
+            } else {
+                resultDislay.innerHTML = num;
+                result = 0;
+            }
+        }
+        function pressOperator(operator) {
+            resultDislay.innerHTML += operator;
+            result = 0;
+        }
+        function pressC() {
+            resultDislay.innerHTML = '';
+            result = 0;
+        }
+        function pressEqual() {
+            result = eval(resultDislay.innerHTML);
+            resultDislay.innerHTML = result;
+        }
+</script>
+</body>
+</html>
