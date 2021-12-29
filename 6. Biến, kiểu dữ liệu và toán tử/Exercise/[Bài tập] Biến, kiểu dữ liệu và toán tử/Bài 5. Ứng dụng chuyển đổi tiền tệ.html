@@ -12,33 +12,36 @@
         <th>To Currency</th>
     </tr>
     <tr>
-        <td><input type="number" id="Amount"></td>
+        <td><input type="number" id="amount"></td>
         <td>
-            <form>
-                <select id="from">
+            <form id="conver">
+                <select >
                     <option>VietNam</option>
-                    <option>USD</option>
-                    <OPTION>EUR</OPTION>
+<!--                    <option>USD</option>-->
+<!--                    <OPTION>EUR</OPTION>-->
                 </select>
             </form>
         </td>
         <td>
             <form>
-                <select id ='to'>
-                    <option>VietNam</option>
+                <select>
+<!--                    <option>VietNam</option>-->
                     <option>USD</option>
-                    <OPTION>EUR</OPTION>
+<!--                    <OPTION>EUR</OPTION>-->
                 </select>
             </form>
         </td>
+        <td><button onclick="getConver()">Convert</button></td>
     </tr>
 </table>
-
+<p id="resultConver"></p>
 <script>
-    let usd= 1;
-    let vn= 22000;
-    let eur= 25000;
-    let result = parseInt()
+    function getConver() {
+        let inputAmount = parseInt(document.getElementById('amount').value);
+        let result = inputAmount*22000;
+        document.getElementById('resultConver').innerText = 'Result:  ' + result ;
+        }
+
 </script>
 
 </body>

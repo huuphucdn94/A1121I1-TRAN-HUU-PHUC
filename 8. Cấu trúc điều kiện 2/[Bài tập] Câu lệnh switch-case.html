@@ -5,15 +5,14 @@
     <title>Viết một ứng dụng cho phép tính được số ngày trong một tháng</title>
 </head>
 <body>
-<form>
     <label>Nhập vào tên tháng cần biết số ngày:</label><br><br>
     <input id="month" type="number"/>
     <button onclick="getDay()">Tính số ngày</button>
-</form><br>
+    <br>
 <p id="result"></p>
     <script>
     function getDay() {
-        let a = document.getElementById("month");
+        let a = parseInt(document.getElementById("month").value);
         switch (a) {
             case 1:
             case 3:

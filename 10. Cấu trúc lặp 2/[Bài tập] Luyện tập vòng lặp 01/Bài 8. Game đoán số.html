@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8: Game đoán số</title>
+</head>
+<body>
+<button onclick="play()">Chơi</button>
+<script>
+    function play() {
+        let from = parseInt(prompt("Khoảng số bắt đầu từ"));
+        let to = parseInt(prompt("Khoảng số kết thúc là"));
+        let comNum = Math.floor(Math.random() * (to - from + 1 ) + from);
+        let userNum ;
+        let checkLose = true;
+        for (let i = 0; i < 3; i++) {
+            userNum = parseInt(prompt("Mời bạn đoán số"));
+            if (userNum === comNum){
+                alert("Chiến thắng");
+                checkLose = false;
+                break;
+            }else if(userNum > comNum){
+                alert("Số bạn nhập lớn hơn, vui lòng nhập lại");
+            }else {
+                alert("Số bạn nhập bé hơn, vui lòng nhập lại");
+            }
+        }
+        if (checkLose){
+            alert("Xui quá !!!!");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</title>
+</head>
+<!--Cửa hàng của bạn nhận gửi bán sản phẩm cho một công ty khác,-->
+<!--và sau mỗi tháng bạn cần tính toán số tiền hoa hồng bạn nhận được. -->
+<!--Với mức hoa hồng theo doanh số bán hàng như sau:-->
+<!--5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.-->
+<!--10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.-->
+<!--20 % nếu tổng doanh số là lớn hơn 300 triệu.-->
+<body>
+    <label>Nhập vào doanh số bán hàng(Triệu VND):</label>
+    <input type="number" id="inputDoanhThu">
+    <button onclick="conver()">Tính số tiền Hoa Hồng</button>
+    <br>
+    <p id="resultHoaHong"></p>
+<script>
+    function conver() {
+        let doanhThu = parseInt(document.getElementById('inputDoanhThu').value);
+        if (doanhThu <= 100) {
+            let hoaHong = doanhThu * 5 / 100;
+            document.getElementById('resultHoaHong').innerHTML = 'Số tiền hoa hồng của bạn là: ' + hoaHong +' Triệu';
+        } else if (doanhThu <=300) {
+            hoaHong = doanhThu * 10 /100;
+            document.getElementById('resultHoaHong').innerText = 'Số tiền hoa hồng của bạn là: ' + hoaHong +' Triệu';
+        } else
+            hoaHong = doanhThu * 20 /100;
+            document.getElementById('resultHoaHong').innerText = 'Số tiền hoa hồng của bạn là: ' + hoaHong +' Triệu';
+    }
+</script>
+</body>
+</html>
