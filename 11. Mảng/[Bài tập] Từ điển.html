@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Từ điển</title>
+</head>
+<body>
+    <label for="inputEng">Inphut:</label>
+    <input id="inputEng" type="text"/>
+    <button onclick="searchVn()">Search</button>
+    <p id="result"></p>
+<script>
+    let arrEng = ["people", "hello", "map"];
+    let arrVn = ["con người", "xin chào", "bản đồ"];
+    function searchVn() {
+        let result = "";
+        let keyWord = document.getElementById('inputEng').value;
+        let index = arrEng.indexOf(keyWord);
+        if (index != -1) {
+            result = arrVn[index];
+        } else {
+            result = "không tìm thấy";
+        }
+    }
+    document.getElementById("result").innerText = result;
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác</title>
+</head>
+<body>
+    <span>Enter the first side of triangle</span>
+    <input id="firstSide" type="number" placeholder="First side"><br><br>
+    <span>Enter the second side of triangle</span>
+    <input id="secondSide" type="number" placeholder="Second side"><br><br>
+    <span>Enter the third side of triangle</span>
+    <input id="thirdSide" type="number" placeholder="Third side"><br>
+    <p>Result: <span id="result"></span></p>
+    <button onclick="myFunction()">Check</button>
+
+    <script>
+        function myFunction(){
+            let a = parseInt(document.getElementById('firstSide').value);
+            let b = parseInt(document.getElementById('secondSide').value);
+            let c = parseInt(document.getElementById('thirdSide').value);
+            if (a > 0 && b >0 && c > 0 && a + b >c && a + c > b && b + c > a){
+                    document.getElementById('result').innerText = "These 3 sides can form a triangle";
+                } else
+                    document.getElementById('result').innerText = "These 3 sides can not from a triangle";
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.</title>
+</head>
+<body>
+<span>Enter your age</span>
+<input type="nuckAmber" id="myAge" placeholder="Enter your age">
+    <button type="submit" value="Check your age" onclick="functionCheckAge()">Check số bạn</button>
+<script>
+    function functionCheckAge() {
+    let a = document.getElementById('myAge').value;
+    if (a > 0 && a < 120){
+        alert('tuổi của bạn là: ' + a);
+    } else
+        alert('không phải là tuổi của bạn');
+    }
+
+</script>
+</body>
+</html>

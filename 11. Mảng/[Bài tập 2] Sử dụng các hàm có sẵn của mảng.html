@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert dashes (-) between even numbers</title>
+</head>
+<body>
+    <script>
+        let number = prompt('Enter your number: ');
+        let str = number.toString();
+        let result = [str[0]];
+        for (let x = 1; x < str.length; x++){
+            if((str[x - 1]% 2 === 0) && (str[x]%2 ===0)){
+                result.push('-',str[x]);
+            } else {
+                result.push(str[x]);
+            }
+        }
+        //document.write('here is your string: ' + result);
+        console.log(result.join(''));
+    </script>
+</body>
+</html>

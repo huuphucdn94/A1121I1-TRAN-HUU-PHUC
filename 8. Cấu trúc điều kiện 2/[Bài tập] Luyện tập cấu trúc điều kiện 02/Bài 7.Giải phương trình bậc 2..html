@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Giải phương trình bậc 2.</title>
+</head>
+<body>
+    <h5>GIẢI PHƯƠNG TRÌNH BẬC 2 CÓ DẠNG:</h5>
+    <p>aX<sup>2</sup>+bX+c=0</p>
+    <p id="result"></p>
+    <script>
+        let a = parseInt(prompt("Enter the first coefficient:"));
+        let b = parseInt(prompt("Enter the second coefficient:"));
+        let c = parseInt(prompt("Enter the third coefficient:"));
+        if (a === 0){
+            if (b === 0 && c === 0){
+                document.getElementById('result').innerText = 'Phương trình có vô số nghiệm.';
+            } else if (b === 0 && c !== 0){
+                document.getElementById('result').innerText = 'Phương trình vô nghiệm.';
+            } else if (b !==0 && c !== 0){
+                let x = -c/b;
+                document.getElementById('result').innerText = 'Phương trình có nghiệm là x = ' + x;
+            }
+        } else if (a !== 0){
+            let delta = b*b - 4*a*c;
+            let sqrtDelta = Math.sqrt(delta);
+            if (delta > 0){
+                let x1 = (-b -sqrtDelta)/(2*a);
+                let x2 = (-b +sqrtDelta)/(2*a);
+                document.getElementById('result').innerText = 'Phương trình có 2 nghiệm phân biệt:' + 'x1 = ' + x1 + '  và  x2 = ' + x2;
+            } else
+                document.getElementById('result').innerText = 'Phương trình vô nghiệm.'
+        }
+    </script>
+</body>
+</html>

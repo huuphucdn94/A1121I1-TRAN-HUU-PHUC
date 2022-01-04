@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6: Giải phương trình bậc 1.</title>
+</head>
+<body>
+    <h4>GIẢI PHƯƠNG TRÌNH BẬC NHẤT MỘT ẨN DẠNG: </h4><p style="color: #d61b06">ax + b = 0</p>
+    <p id="result"></p>
+    <script>
+        let a = parseInt(prompt("Enter the first coefficient: "));
+        let b = parseInt(prompt("Enter the second coefficient: "));
+        let result = - b/a;
+        if (a ==0 && b == 0){
+            document.getElementById('result').innerText = "Phương trình có vô số nghiệm.";
+        } else if ( a==0 && b!= 0){
+            document.getElementById('result').innerText = "Phương trình vô nghiệm.";
+        } else
+            document.getElementById('result').innerText = "Phương trinh có 1 nghiệm: " + result;
+    </script>
+</body>
+</html>

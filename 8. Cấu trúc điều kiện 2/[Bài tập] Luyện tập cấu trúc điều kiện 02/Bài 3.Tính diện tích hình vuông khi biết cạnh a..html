@@ -7,6 +7,14 @@
 <body>
     <h3>TÍNH DIỆN TÍCH HÌNH VUÔNG</h3>
     <label>Nhập vào độ dài cạnh hình vuông</label>
-    <input type="number" id="input"/>
+    <input type="number" id="inputSideOfSquare" placeholder="enter the side" oninput="areaSquareFunction()"/><br><br>
+    <span id="result"></span>
+    <script>
+        function areaSquareFunction(){
+            let a = document.getElementById('inputSideOfSquare').value;
+            let areaSquare = a*a;
+            document.getElementById('result').innerText = "Diện tích của hình vuông là: " + areaSquare;
+        }
+    </script>
 </body>
 </html>
