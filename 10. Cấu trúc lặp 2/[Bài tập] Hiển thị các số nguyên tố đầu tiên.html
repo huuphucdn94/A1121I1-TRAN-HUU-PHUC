@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+        <script>
+            let numbers = prompt('Nhập vào số lượng số nguyên tố đầu tiên cần in ra: ');
+            let n = 2;
+            let count = 0;
+            let result = "";
+
+            function checkPrimeNumbers(numbers) {
+                if (numbers < 2) {
+                    return false;
+                }
+                else if (numbers == 2) {
+                    return true;
+                }
+                else if (numbers % 2 == 0) {
+                    return false;
+                }
+                else {
+                    for (let i =3; i < Math.sqrt(numbers); i += 2){
+                        if (numbers % 2 == 0){
+                            return false;
+                            break;
+                        }
+                    }
+                }
+                return true;
+            }
+            while (count < numbers){
+                if (checkPrimeNumbers(n)){
+                    count += 1;
+                    result = result + `<span>${n}; </span1>`;
+                }
+                n += 1;
+            }
+            document.write(result);
+        </script>
+</body>
+</html>
