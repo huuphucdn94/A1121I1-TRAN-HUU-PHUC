@@ -7,7 +7,24 @@
 <body>
 
 <script>
-    let array = [5];
+
+    let rowArr = parseInt(prompt("input row: "));
+    let colArr = parseInt(prompt("input col: "));
+    let myArr2d = Array(rowArr);
+
+    for (let row = 0; row < myArr2d.length; row++) {
+        myArr2d[row] = Array(colArr);
+        for (let col = 0; col < myArr2d[row].length; col++) {
+            let value = prompt("input a [" + row + "] [" + col + "] :");
+            myArr2d[row].push(value);
+        }
+    }
+    for (let row = 0; row < myArr2d.length; row++) {
+        for (let col = 0; col < myArr2d[row].length; col++) {
+            document.write(myArr2d[row][col] + " ");
+        }
+        document.write("<br>")
+    }
 </script>
 </body>
 </html>
