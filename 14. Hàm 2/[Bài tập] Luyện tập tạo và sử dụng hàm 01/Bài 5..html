@@ -5,12 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+
+<lablel for="inputNgoiSao">Input: </lablel>
+<input id="inputNgoiSao">
+<button onclick="searchStar()">Search</button>
+<p id="result"></p>
     <script>
-        let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
-        let star = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let arrNgoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arrStar = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
         function searchStar() {
             let result ="";
-
+            let keyword = document.getElementById('inputNgoiSao').value;
+            let index = arrNgoiSao.indexOf(keyword);
+            if (index != -1) {
+               result = arrStar[index];
+            } else {
+                result = "Không tìm thấy!";
+            }
+            document.getElementById('result').innerText = result;
         }
     </script>
 </body>
