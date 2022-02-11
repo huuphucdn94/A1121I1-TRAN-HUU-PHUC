@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 2. VẼ TAM GIÁC VUÔNG</title>
+</head>
+<body>
+<script>
+    let height = parseInt(prompt("Enter your height"));
+    let shape ="";
+    for (let i = 1; i <= height; i++){
+        for (let j = 1; j <= height; j++){
+            if (i === height){
+                shape += "*";
+            } else if (j === 1 || j === i){
+                shape += "*";
+            } else {
+                shape += "&ensp;";
+            }
+        }
+        shape += "<br>";
+    }
+    document.write(shape);
+</script>
+</body>
+</html>

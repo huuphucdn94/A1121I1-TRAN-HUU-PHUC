@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ hình chữ nhật rỗng</title>
+</head>
+<body>
+<script>
+    let width = parseInt(prompt("Please enter width"));
+    let height = parseInt(prompt("Please enter height"));
+    let shape = "";
+    for (let i= 1; i<= height; i++){
+        for (let j= 1; j<= width; j++){
+            if (i === 1 || i === height){
+                shape += "*";
+            }else if (j === 1 || j === width){
+                shape += "*";
+            }else {
+                shape += "&ensp;";
+            }
+        }
+        shape += "<br>";
+    }
+    document.write(shape);
+</script>
+</body>
+</html>

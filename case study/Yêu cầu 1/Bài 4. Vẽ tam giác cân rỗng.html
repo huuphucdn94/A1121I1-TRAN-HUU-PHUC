@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4.Vẽ tam giác cân rỗng</title>
+</head>
+<body>
+<script>
+    let height = parseInt(prompt("Enter the height"));
+    let width = height * 2 - 1;
+    let shape = "";
+    for (let i = 1; i <= height; i++){
+        for (let j = 0; j < width/2 - i; j++){
+            shape += "&ensp;";
+        }
+        for (let k = 0; k < i*2 - 1; k++){
+            if (i === height){
+                shape += "*";
+            } else if (k === 0 || k === i*2 - 2){
+                shape += "*";
+            } else {
+                shape += "&ensp;";
+            }
+        }
+        shape += "<br>";
+    }
+    document.write(shape);
+</script>
+</body>
+</html>

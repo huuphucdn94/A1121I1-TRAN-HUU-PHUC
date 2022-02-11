@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành Class và Object</title>
+</head>
+<body>
+    <script>
+        // function Student(id, name, address) {
+        //     this.id = id;
+        //     this.name = name;
+        //     this.address = address;
+        //     this.getinfor = function () {
+        //         return "id= " + this.id + " name " + this.name + " address " + this.address;
+        //     }
+        // }
+        // var student = new Student(1, "Nguyen Van A", "Ha Noi");
+        // console.log(student.getinfor());
+
+        // function Car(name, model, weight, color) {
+        //     this.name = name;
+        //     this.model = model;
+        //     this.weight = weight;
+        //     this.color = color;
+        //     this.start = function () {
+        //             document.write("starting..." + this.name +"<br>");
+        //         }
+        //     this.dive = function () {
+        //             document.write("diving..." + this.model);
+        //         }
+        //     this.stop = function () {
+        //             document.write("stopping..." + this.weight);
+        //         }
+        //     this.break = function () {
+        //             document.write("breaking..." + this.color);
+        //         }
+        //     this.toString = function () {
+        //             document.write("toString..." + this.color);
+        //         }
+        //     }
+        // class Car{
+        //     constructor(name, model, weight, color) {
+        //         this.name = name;
+        //         this.model = model;
+        //         this.weight = weight;
+        //         this.color = color;
+        //     }
+        //     start() {
+        //         document.write("starting..." + this.name);
+        //     }
+        // }
+        //
+        // let car1 = new Car("BMW", "123", 1000, "BLACK");
+        // car1.start()
+        // car1.dive();
+        let person = {fname:"John", lname:"Doe", age:25};
+        for (let i in person) {
+            console.log(person[i]);
+        }
+    </script>
+</body>
+</html>

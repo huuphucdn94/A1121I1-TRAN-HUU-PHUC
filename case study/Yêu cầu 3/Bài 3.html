@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let numerators = [];
+    let denominators = [];
+    let size = parseInt(prompt("Nhập vào độ dài mảng của phân số"));
+
+    for (let i = 0; i < size; i++){
+        numerators.push(parseInt(prompt("Nhập vào tử số của mảng")));
+        denominators.push(parseInt(prompt("Nhập vào mẫu số của mảng")));
+    }
+    function maxFraction(numerators, denominators) {
+        let maxIndex = 0;
+        for (let i = 1; i <numerators.length; i++){
+            if (numerators[maxIndex] * denominators[i] < numerators[i] * denominators[maxIndex]){
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
+    }
+    alert("chỉ số của phân số lớn nhất là: " + maxFraction(numerators, denominators));
+</script>
+</body>
+</html>

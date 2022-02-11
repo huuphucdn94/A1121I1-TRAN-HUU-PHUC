@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let character = prompt("Nhập vào ký tự cần kiểm tra: ");
+    character = character.toLocaleLowerCase()
+    switch (character) {
+        case 'o':
+        case 'u':
+        case 'i':
+        case 'a':
+        case 'e':
+            alert('Đây là nguyên âm');
+            break;
+            default:
+                alert('Đây là phụ âm');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let arrA = [];
+    let arrB = [];
+    let result = [];
+    let sizeA = parseInt(prompt("Nhập vào độ dài mảng a"));
+    for (let i = 0; i < sizeA; i++){
+        arrA.push(parseInt(prompt("Nhập vào số nguyên trong mảng a")));
+    }
+
+    let sizeB = parseInt(prompt("Nhập vào độ dài mảng b"));
+    for (let i = 0; i < sizeB; i++){
+        arrB.push(parseInt(prompt("Nhập vào số nguyên trong mảng b")));
+    }
+
+    for (let i = 0; i < sizeB; i++){
+        if (arrA.indexOf(arrB[i]) === -1 && result.indexOf(arrB[i]) === -1){
+            result.push(arrB[i]);
+        }
+    }
+    result.sort(function (a,b) {return a -b});
+    alert("Mảng A:" + arrA + "\nMảng B: " + arrB + "\nCác số nguyên xuất hiện trong mảng B nhưng không xuất hiện trong mảng B là: " + result);
+
+</script>
+</body>
+</html>

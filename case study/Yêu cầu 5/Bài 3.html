@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt("Nhập vào số dòng của ma trận"));
+    let n = parseInt(prompt("Nhập vào số cột của ma trận"));
+    let matrix =[];
+    for (let i = 0; i < m; i++){
+        let row = [];
+        for (let j = 0; j < n; j++){
+            row[j] = parseInt(prompt("Nhập số vào ma trận"));
+        }
+        matrix[i] = row;
+    }
+    function findMaxAndMin(matrix) {
+        let max = matrix[0][0];
+        let min = matrix[0][0];
+        for (let i = 0; i < matrix.length; i++){
+            for (let j =0; j <matrix[i].length; j++){
+                if (max < matrix[i][j]){
+                    max = matrix[i][j];
+                }
+                if (min > matrix[i][j]){
+                    min = matrix[i][j];
+                }
+            }
+        }
+        alert("phần tử lớn nhất là: " + max +
+                "\nphần tử nhỏ nhất là: " + min);
+
+    }
+    console.table(matrix);
+    findMaxAndMin(matrix);
+</script>
+</body>
+</html>

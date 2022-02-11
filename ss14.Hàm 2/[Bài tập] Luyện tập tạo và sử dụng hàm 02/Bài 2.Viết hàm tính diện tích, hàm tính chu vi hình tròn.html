@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn</title>
+</head>
+<body>
+<input id="inputRadius" type="number" placeholder="enter Radius of the circle">
+<button onclick="myFunction()">Check</button>
+<p>The area of the circle: <span id="area"></span></p>
+<p>The diameter of the circle: <span id="diameter"></span></p>
+    <script>
+        function myFunction() {
+            var r = document.getElementById("inputRadius").value;
+            const PI = 3.14;
+            let s = PI*r*r;
+            let c = 2*PI*r;
+            document.getElementById("area").innerText = s;
+            document.getElementById("diameter").innerText = c;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = [];
+    let temp = 0;
+    let n = parseInt(prompt("Nhập vào độ dài mảng a"));
+    for (let i = 0; i < n; i++){
+        a.push(parseInt(prompt("Nhập vào số nguyên")));
+    }
+    for (let i = 0; i < a.length; i++){
+        temp = temp + a[i];
+        b[i] = temp;
+    }
+    alert('Mảng a là: ' + a + '\n' + 'Prefix Sums của mảng a là:' + b);
+</script>
+</body>
+</html>

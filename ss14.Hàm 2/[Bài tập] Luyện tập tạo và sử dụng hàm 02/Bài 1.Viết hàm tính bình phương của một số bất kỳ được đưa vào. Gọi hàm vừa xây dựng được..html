@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính bình phương của một số bất kỳ được đưa vào</title>
+</head>
+<body>
+<input id="inputNumber" type="number" placeholder="enter your number">
+<button onclick="myFunction()">Check</button>
+<p id="result"></p>
+    <script>
+    function  myFunction() {
+        let input = document.getElementById("inputNumber").value;
+        let result = input*input;
+        document.getElementById("result").innerHTML ="your result is: "+ result;
+    }
+    </script>
+</body>
+</html>

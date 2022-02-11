@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Enter your salary"));
+    let tax = 0;
+    let netSalary = 0;
+    if (salary >= 15000000) {
+        tax = 20;
+    } else if (salary >= 7000000){
+        tax = 10;
+    } else {
+        tax = 5;
+    }
+    netSalary = salary - salary*tax/100;
+    alert("Tax: "+ tax + "\n" + "Net Salary: " + netSalary);
+</script>
+</body>
+</html>

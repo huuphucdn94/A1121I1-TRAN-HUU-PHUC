@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào.</title>
+</head>
+<body>
+    <input id="inputTheNumber" type="number" placeholder="Enter your number">
+    <button onclick="myFunction()">Check</button>
+    <p>Result of factorial: <span id="factorial"></span></p>
+</body>
+<script>
+    function myFunction() {
+        let number = parseInt(document.getElementById("inputTheNumber").value);
+        let result = 1;
+        if (number === 0){
+            document.getElementById("factorial").innerText = "1";
+        } else {
+            for (let i = 2; i <= number; i++) {
+                result = result*i;
+                return result;
+            }
+            document.getElementById("factorial").innerText = result;
+        }
+    }
+</script>
+</html>
